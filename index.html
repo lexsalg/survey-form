@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible"
+            content="ie=edge">
+      <title>Formulario de Encuesta</title>
+      <link rel="shortcut icon"
+            href="favicon.ico"
+            type="image/x-icon">
+      <link rel="icon"
+            href="favicon.ico"
+            type="image/x-icon">
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
+            rel="stylesheet">
+      <link href="styles.css"
+            rel="stylesheet">
+      <script defer
+              src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+</head>
+
+<body id="main">
+      <div class="container">
+            <h1 id="title"
+                class="title">Formulario de Encuesta</h1>
+            <div class="subtitle">
+                  <p id="description">
+                        ¿Quién debería ser el personaje principal en la secuela de Dragon Ball Super?
+                  </p>
+            </div>
+
+            <form id="survey-form"
+                  method="GET"
+                  action="">
+
+                  <div class="field">
+                        <label class="label"
+                               id="name-label"
+                               for="name">Nombre</label>
+                        <div class="control">
+                              <input class="input"
+                                     id="name"
+                                     type="text"
+                                     name="name"
+                                     placeholder="Ingrese su Nombre"
+                                     autofocus
+                                     required>
+                        </div>
+                  </div>
+
+                  <div class="field">
+                        <label class="label"
+                               id="email-label"
+                               for="email">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                              <input class="input"
+                                     id="email"
+                                     type="email"
+                                     name="email"
+                                     placeholder="Ingrese su Email"
+                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                     required>
+                              <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                              </span>
+                              <span class="icon is-small is-right">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                              </span>
+                        </div>
+                        <!-- <p class="help is-danger">Email no válido!</p> -->
+                  </div>
+
+                  <div class="field">
+                        <label class="label"
+                               id="number-label"
+                               for="number">Edad</label>
+                        <div class="control">
+                              <input class="input"
+                                     id="number"
+                                     type="number"
+                                     name="number"
+                                     min="16"
+                                     max="101"
+                                     placeholder="Ingrese su Edad"
+                                     required>
+                        </div>
+                  </div>
+
+                  <div class="field">
+                        <label class="label">Personaje Principal</label>
+                        <div class="control">
+                              <div class="select wd-full">
+                                    <select id="dropdown"
+                                            class="wd-full">
+                                          <option>Gokú</option>
+                                          <option>Vegeta</option>
+                                          <option>Gohan</option>
+                                    </select>
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="field">
+                        <label class="label">Toda la saga?</label>
+                        <div class="control">
+                              <label class="radio">
+                                    <input type="radio"
+                                           value="0"
+                                           name="rbtn"
+                                           checked> Si
+                              </label>
+                              <label class="radio">
+                                    <input type="radio"
+                                           name="rbtn"
+                                           value="1"> No
+                              </label>
+                        </div>
+                  </div>
+
+                  <div class="field">
+                        <label class="label">Qué Personaje debería aparecer en la nueva saga?</label>
+                        <div class="control">
+                              <label class="checkbox">
+                                    <input type="checkbox"
+                                           value="0"> Brolly
+                              </label>
+                        </div>
+                        <div class="control">
+                              <label class="checkbox">
+                                    <input type="checkbox"
+                                           value="1"> Bardock
+                              </label>
+                        </div>
+                        <div class="control">
+                              <label class="checkbox">
+                                    <input type="checkbox"
+                                           value="2"> Gogeta
+                              </label>
+                        </div>
+                  </div>
+
+                  <div class="field">
+                        <label class="label">Algún otro personaje que se debería de incluir?</label>
+                        <div class="control">
+                              <textarea class="textarea"
+                                        placeholder="Ingrese su comentario"></textarea>
+                        </div>
+                  </div>
+
+                  <div class="field is-grouped">
+                        <div class="control">
+                              <button class="button is-link"
+                                      id="submit"
+                                      type="submit">Submit</button>
+                        </div>
+                        <div class="control">
+                              <button class="button is-text">Cancel</button>
+                        </div>
+                  </div>
+
+
+            </form>
+
+      </div>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
